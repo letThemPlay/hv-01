@@ -22,5 +22,21 @@
       interface = "eno1";
       addressing = "dhcp";
     };
+
+    networking.guest = {
+      defaultNetwork = "lan";
+      networks.lan.uplink = "enp4s0";   # the second NIC, NOT eno1 (management)
+    };
+    
+    compute.incus.imageServers = [ "images.linuxcontainers.org" ];
+
+    storage = {
+      defaultPool = "vms";
+      pools.vms = {
+        driver = "zfs";
+        devices = [ "/dev/disk/by-id/nvme-CT1000P3SSD8_24464C1E36C1" ];
+      };
+    };
+
   };
 }
