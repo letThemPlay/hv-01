@@ -25,10 +25,22 @@
 
     networking.guest = {
       defaultNetwork = "lan";
-      networks.lan.uplink = "enp4s0";   # the second NIC, NOT eno1 (management)
+      networks.lan.uplink = "enp4s0"; # the second NIC, NOT eno1 (management)
     };
-    
+
     compute.incus.imageServers = [ "images.linuxcontainers.org" ];
+
+    gitops = {
+      enable = true;
+      repository = "ssh://git@github.com/letThemPlay/hv-01.git";
+      sshKeyFile = "/etc/strata/gitops-key";
+      knownHosts = [
+        "github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl"
+      ];
+      trustedSigners = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICiC7tRO88/aQaqnEObZM3YrdJKpsfJl6kQ5Q86vOtti"
+      ]; # ~/.ssh/strata-signing.pub
+    };
 
     storage = {
       defaultPool = "vms";
