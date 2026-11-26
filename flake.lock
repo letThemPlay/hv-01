@@ -52,11 +52,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1795683094,
-        "narHash": "sha256-egvQ/ujMqOCGyjzm0jan6RqYo2YMGsBsMzJLy3D8Z+E=",
+        "lastModified": 1795701144,
+        "narHash": "sha256-4AchXDZo7uEqHSjahJatCkO67IBTzbF5nNt+1hRL6M8=",
         "owner": "letThemPlay",
         "repo": "Strata",
-        "rev": "dc64ef8bd03e339d8c1c052e9528af19839a0f25",
+        "rev": "ec914c4cf8e3c29de5beeaacd8048082ec83052f",
         "type": "github"
       },
       "original": {
