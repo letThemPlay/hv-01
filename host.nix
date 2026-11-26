@@ -30,6 +30,22 @@
 
     compute.incus.imageServers = [ "images.linuxcontainers.org" ];
 
+    strata.workloads.vms.git-01 = {
+      resources = {
+        cpu = 2;
+        memory = "2GiB";
+      };
+      image = "debian/13/cloud";
+      imageServer = "images.linuxcontainers.org";
+      disks.root.size = "10GiB";
+      disks.data.size = "1GiB";
+      networks.eth0.network = "lan";
+      autostart = true;
+      cloudInit.sshAuthorizedKeys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICiC7tRO88/aQaqnEObZM3YrdJKpsfJl6kQ5Q86vOtti"
+      ]; # your login key
+    };
+
     gitops = {
       enable = true;
       repository = "ssh://git@github.com/letThemPlay/hv-01.git";
