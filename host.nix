@@ -46,18 +46,6 @@
       ]; # your login key
     };
 
-    workloads.vms.cli-01 = {
-      resources = {
-        cpu = 1;
-        memory = "1GiB";
-      };
-      disks.root = {
-        size = "2GiB";
-        pool = "vms";
-      };
-      lifecycle.protected = true;
-    };
-
     gitops = {
       enable = true;
       repository = "ssh://git@github.com/letThemPlay/hv-01.git";
