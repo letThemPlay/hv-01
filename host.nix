@@ -30,7 +30,7 @@
 
     compute.incus.imageServers = [ "images.linuxcontainers.org" ];
 
-    strata.workloads.vms.git-01 = {
+    workloads.vms.git-01 = {
       resources = {
         cpu = 2;
         memory = "2GiB";
