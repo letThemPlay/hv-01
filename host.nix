@@ -32,7 +32,7 @@
 
     workloads.vms.git-01 = {
       resources = {
-        cpu = 2;
+        cpu = 4;
         memory = "2GiB";
       };
       image = "debian/13/cloud";
