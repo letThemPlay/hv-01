@@ -38,7 +38,7 @@
         "github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl"
       ];
       trustedSigners = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICiC7tRO88/aQaqnEObZM3YrdJKpsfJl6kQ5Q86vOtti"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJaIa25GV7FYqSOtJCrceijLN9KvY7xEMZOyCznx3Sm9"
       ]; # ~/.ssh/strata-signing.pub
     };
 
