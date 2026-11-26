@@ -55,6 +55,7 @@
         size = "2GiB";
         pool = "vms";
       };
+      lifecycle.protected = true;
     };
 
     gitops = {
